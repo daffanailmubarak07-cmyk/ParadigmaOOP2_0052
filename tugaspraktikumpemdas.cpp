@@ -63,3 +63,29 @@ public:
     }
 };
 
+int main() {
+
+    RekeningBank* rekening1 = new RekeningSyariah("Andi", 5000000);
+    RekeningBank* rekening2 = new RekeningKonvensional("Budi", 3000000);
+    RekeningBank* rekening3 = new RekeningPremium("Citra", 8000000);
+    RekeningBank* rekening4 = new RekeningPremium("Dina", 15000000);
+
+    rekening1->potongAdmin();
+    rekening1->tampilkanSaldo();
+
+    rekening2->potongAdmin();
+    rekening2->tampilkanSaldo();
+
+    rekening3->potongAdmin();
+    rekening3->tampilkanSaldo();
+
+    rekening4->potongAdmin();
+    rekening4->tampilkanSaldo();
+
+    delete rekening1;
+    delete rekening2;
+    delete rekening3;
+    delete rekening4;
+
+    return 0;
+}
